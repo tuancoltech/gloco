@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.google.gms:google-services:3.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    supportVersion = '24.1.1'
+
+    //Retrofit and gson for parsing json object
+    gsonVersion = '2.8.0'
+    retrofitVersion = '2.1.0'
+    gsonConverterVersion = '2.1.0'
+
+    //Stetho for loggin network response
+    stethoVersion = '1.4.1'
+    stethoOkHttpVersion = '1.4.1'
+    loggingInterceptorVersion = '3.3.1'
+
+    espressoVersion = '2.2.2'
+    guavaVersion = '18.0'
+
+    //Google play service
+    playServiceVersion = '9.2.0'
+
+    //Secure preference
+    securePreferencesVersion = '0.1.4'
+
+    //Glide for loading images into ImageView
+    glideVersion = '3.7.0'
+    glideTransformVersion = '2.0.1'
+
+    //GCM
+    gcmVersion = '9.2.0'
+
+    //RecyclerView divider
+    recyclerViewDividerVersion = '1.4.0'
+
+}

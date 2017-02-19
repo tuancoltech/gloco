@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GlocoExercise</string>
+
+    <!-- ============= MAIN ======================= -->
+    <string name="get_location">Get location</string>
+    <string name="get_doctors">Get doctors</string>
+    <string name="msg_only_work_with_wifi">Only works with Wi-Fi</string>
+    <string name="msg_only_work_with_cellular">Only works with Cellular</string>
+    <string name="message_location_not_allow">Location permission denied</string>
+    <string name="blank_response">Blank response</string>
+
+</resources>

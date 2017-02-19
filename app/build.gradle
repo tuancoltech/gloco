@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "com.gloco.exercise"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:$rootProject.supportVersion"
+    compile "com.android.support:design:$rootProject.supportVersion"
+
+    //Retrofit and GSON
+    //Retrofit networking library
+    compile "com.google.code.gson:gson:$rootProject.gsonVersion"
+    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.gsonConverterVersion"
+
+    //Facebook SDK
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+
+    //For logging Retrofit request and response
+    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingInterceptorVersion"
+
+    //Stetho library which enables Chrome debugging tools for network traffic, db files and view layouts
+    compile "com.facebook.stetho:stetho:$rootProject.stethoVersion"
+    compile "com.facebook.stetho:stetho-okhttp3:$rootProject.stethoOkHttpVersion"
+
+    //Secure preference
+    //Secure shared preference library
+    compile "com.scottyab:secure-preferences-lib:$rootProject.securePreferencesVersion"
+
+    //Glide library for loading and displaying images
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    compile "jp.wasabeef:glide-transformations:$rootProject.glideTransformVersion"
+
+    //GCM
+    compile "com.google.android.gms:play-services-gcm:$rootProject.gcmVersion"
+
+    //RecyclerView divider
+    compile "com.yqritc:recyclerview-flexibledivider:$rootProject.recyclerViewDividerVersion"
+
+    //Espresso UI test
+    compile "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
+
+    compile "com.google.guava:guava:$rootProject.guavaVersion"
+
+    compile "com.google.android.gms:play-services-location:$rootProject.playServiceVersion"
+
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
+
+    compile 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    compile 'info.hoang8f:android-segmented:1.0.6'
+
+    testCompile 'junit:junit:4.12'
+}
